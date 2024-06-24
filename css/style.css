@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #F6F6F6;
+    font-family: "Reddit Mono", monospace; ;
+}
+
+.conteiner-list {
+    height: 80vh;
+    width: 66vw;
+
+    margin: 10vh auto;
+    border: #cfcece83 2px solid;
+}
+
+.conteiner-list p {
+    padding: 20px;
+}
+
+.conteiner-adc-tarefa{
+    display: flex;
+}
+
+.red-border {
+    border: 1px solid red;
+}
+.conteiner-adc-tarefa button {
+    width: 10%;
+    outline: none;
+    border: none;
+    border-bottom: #cfcece83 2px solid;
+}
+
+.conteiner-adc-tarefa button:hover {
+    background-color: #cfcece ;
+    cursor: pointer;
+}
+.adc-tarefa {
+    width: 90%;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-bottom: #cfcece83 2px solid;
+}
+
+.adc-tarefa::placeholder {
+    opacity: 50%;
+}
+
+.list-tarefas {
+    width: 100%;
+    border-top: #cfcece83 2px solid;
+}
+
+.list-tarefas li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    padding: 20px;
+    border-bottom: #cfcece83 2px solid;
+}
+
+.list-tarefas li div button {
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    border-bottom: #cfcece83 2px solid;
+}
+.list-tarefas  li div button:hover {
+    background-color: #cfcece ;
+    cursor: pointer;
+}
+
+.tarefa_concluida {
+    text-decoration: line-through;
+}
+
+
