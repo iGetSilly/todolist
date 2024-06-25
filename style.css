@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Reddit Mono", monospace;
+    background: rgb(8, 8, 8);
+}
+
+/* Estilo do nav */
+
+.background {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    border: 1px solid azure;
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgb(8,8,8), rgb(16,16,16));
+}
+.conteiner-nav {
+    display: flex;
+    margin: 2.5% auto;
+    width: 50vw;
+    height: 10vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(16, 16, 16), rgb(32, 32, 32));
+    color: rgb(75, 75, 75);
+}
+
+.conteiner-nav div {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+
+.conteiner-nav div img {
+    margin: 0px 20px 0 20px;
+    width: 5vw;
+}
+
+.conteiner-nav button {
+    margin: 0 20px 0 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo do hero */
+
+.conteiner-hero {
+    margin: 6% auto;
+    width: 80vw;
+}
+
+.slogan {
+    color: azure;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.slogan span {
+    color: rgb(75, 75, 75);
+}
+
+.descricao {
+    color: rgb(75, 75, 75);
+    font-size: 1rem;
+    padding: 20px;
+    margin-bottom: 5%;
+}
+
+.fale_comigo {
+    margin-left: 20px;
+    
+    border-radius: 20px;
+    color: azure;
+    text-decoration: none;
+    padding: 20px;
+    background: linear-gradient(45deg, rgb(16, 16, 16), rgb(32, 32, 32));
+}
+
+.projetos {
+    padding: 20px;
+    background-color: transparent;
+    color: azure;
+}
+
+
