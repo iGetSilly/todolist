@@ -9,7 +9,7 @@ body {
     background: rgb(8, 8, 8);
 }
 
-/* Estilo do nav */
+/* Estilo do corpo do site */
 
 .background {
     position: fixed;
@@ -22,6 +22,9 @@ body {
     border-radius: 20px;
     background: linear-gradient(45deg, rgb(8,8,8), rgb(16,16,16));
 }
+
+/* Estilo do nav */
+
 .conteiner-nav {
     display: flex;
     margin: 2.5% auto;
@@ -32,7 +35,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(45deg, rgb(16, 16, 16), rgb(32, 32, 32));
-    color: rgb(154, 154, 154);
+    color: rgb(75, 75, 75);
 }
 
 .conteiner-nav div {
@@ -42,21 +45,64 @@ body {
 }
 
 .conteiner-nav div img {
-    margin: 0px 10px 0 10px;
-    width: 8vw;
+    margin: 0px 20px 0 20px;
+    width: 5vw;
 }
 
 .conteiner-nav button {
-    margin: auto 20px;
+    margin: 0 20px 0 20px;
     outline: none;
     border: none;
     cursor: pointer;
     height: 3vh;
     width: 4vh;
     background: transparent;
-    background-Image: url(img/Ham\ icon.svg);
+    background-image: url(img/Ham\ icon.svg);
     background-repeat: no-repeat;
     background-size: 3vh;
+}
+
+.off {
+    visibility: hidden;
+    scale: 0;
+    position: absolute;
+    right: 16vw;
+    top: 10vh;
+    background: linear-gradient(45deg, rgb(16, 16, 16), rgb(32, 32, 32));
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 1s ease;
+    transform-origin: 0% 0%;
+}
+
+.off ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border: 1px solid azure;
+    border-radius: 20px;
+    
+}
+
+.off ul li {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(75,75,75);
+}
+
+.off ul li:hover {
+    background-color: rgb(75, 75, 75);
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid rgb(75,75,75);
+}
+
+.off ul li a{
+    color: azure;
+    text-decoration: none;
+    padding: 10px;
 }
 
 /* Estilo do hero */
