@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(45deg, rgb(16, 16, 16), rgb(32, 32, 32));
-    color: rgb(75, 75, 75);
+    color: rgb(154, 154, 154);
 }
 
 .conteiner-nav div {
@@ -42,16 +42,21 @@ body {
 }
 
 .conteiner-nav div img {
-    margin: 0px 20px 0 20px;
-    width: 5vw;
+    margin: 0px 10px 0 10px;
+    width: 8vw;
 }
 
 .conteiner-nav button {
-    margin: 0 20px 0 20px;
-    background: transparent;
+    margin: auto 20px;
     outline: none;
     border: none;
     cursor: pointer;
+    height: 3vh;
+    width: 4vh;
+    background: transparent;
+    background-Image: url(img/Ham\ icon.svg);
+    background-repeat: no-repeat;
+    background-size: 3vh;
 }
 
 /* Estilo do hero */
@@ -68,11 +73,11 @@ body {
 }
 
 .slogan span {
-    color: rgb(75, 75, 75);
+    color: rgb(154, 154, 154);
 }
 
 .descricao {
-    color: rgb(75, 75, 75);
+    color: rgb(154, 154, 154);
     font-size: 1rem;
     padding: 20px;
     margin-bottom: 5%;
