@@ -112,6 +112,13 @@ body {
     width: 80vw;
 }
 
+.changeDisplayOn {
+    display: block;
+}
+.changeDisplayOff {
+    display: none;
+}
+
 .slogan {
     color: azure;
     font-size: 3rem;
@@ -142,6 +149,35 @@ body {
 .projetos {
     padding: 20px;
     background-color: transparent;
+    color: azure;
+}
+
+#projetos {
+    font-size: 2vh;
+}
+
+#projetos ol {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: azure;
+    list-style: none;
+}
+
+#projetos ol li a {
+    margin: 20xp;
+    text-decoration: none;
+    color: azure;
+}
+
+#projetos div a img {
+    background-color: white;
+    height: 10vh;
+    width: 20vw;
+}
+
+#projetos div {
+    
     color: azure;
 }
 

@@ -19,34 +19,86 @@
           <img src="/img/logo white.svg" alt="Logo do site" />
           <p>Leonardo Dutra</p>
         </div>
-        <button onclick="alteraIcon(); changeVisibility()" id="hamIcon"></button>
+        <button
+          onclick="alteraIcon(); changeVisibility()"
+          id="hamIcon"
+        ></button>
         <div class="off">
           <ul>
-            <li><a href="">Contato</a></li>
-            <li><a href="">Projetos</a></li>
-            <li><a href="">Sobre Mim</a></li>
+            <li><a href="#" onclick="changeContent(event, 'home')">Home</a></li>
+            <li>
+              <a href="#" onclick="changeContent(event, 'contato')">Contato</a>
+            </li>
+            <li>
+              <a href="#" onclick="changeContent(event, 'projetos')"
+                >Projetos</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="changeContent(event, 'sobre')">Sobre Mim</a>
+            </li>
           </ul>
         </div>
       </header>
-      <section class="conteiner-hero">
-        <div>
-          <p class="slogan">
-            <span>Tranformando ideias em</span> soluções digitais
-          </p>
-          <p class="descricao">
-            Transformo ideias em interfaces interativas e atraentes, criando
-            websites e aplicações que encantam e engajam. Com um forte foco na
-            usabilidade e design responsivo, garanto que cada projeto ofereça
-            uma experiência de usuário impecável em todos os dispositivos. Vamos
-            juntos trazer sua visão à vida com tecnologia de ponta e design
-            moderno.
-          </p>
-        </div>
-        <div>
-          <a href="" class="fale_comigo">Fale comigo!</a>
-          <a href="" class="projetos">Projetos</a>
-        </div>
-      </section>
+      <main class="conteiner-hero">
+        <section id="home" class="mainContent changeDisplayOn">
+          <div>
+            <p class="slogan">
+              <span>Tranformando ideias em</span> soluções digitais
+            </p>
+            <p class="descricao">
+              Transformo ideias em interfaces interativas e atraentes, criando
+              websites e aplicações que encantam e engajam. Com um forte foco na
+              usabilidade e design responsivo, garanto que cada projeto ofereça
+              uma experiência de usuário impecável em todos os dispositivos.
+              Vamos juntos trazer sua visão à vida com tecnologia de ponta e
+              design moderno.
+            </p>
+          </div>
+          <div>
+            <a href="" class="fale_comigo">Fale comigo!</a>
+            <a href="" class="projetos">Projetos</a>
+          </div>
+        </section>
+        <section id="projetos" class="pageContent changeDisplayOff">
+          <div>
+            <ol>
+              <li>
+                <a
+                  id="sites"
+                  href="#"
+                  onclick="changeProjectContent(event, 'sites')"
+                  ><h1>Projetos em sites</h1></a
+                >
+              </li>
+              <li>
+                <a id="js" href="#" onclick="changeProjectContent(event, 'js')"
+                  ><h1>Projetos em JS</h1></a
+                >
+              </li>
+              <li>
+                <a
+                  id="css"
+                  href="#"
+                  onclick="changeProjectContent(event, 'css')"
+                  ><h1>Projetos em CSS</h1></a
+                >
+              </li>
+            </ol>
+            <div id="sites" class="projetosPageContent changeDisplayOff">
+              <p>Exemplo 1</p>
+              <img src="" alt="" />
+            </div>
+            <div id="js" class="projetosPageContent changeDisplayOff">
+              <p>To-do List</p>
+              <a href="pages/todolist.html"><img src="" alt="" /></a>
+            </div>
+            <div id="css" class="projetosPageContent changeDisplayOff">
+              <p>Exemplo 1</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
   <script src="index.js"></script>

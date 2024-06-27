@@ -22,3 +22,33 @@ function changeVisibility() {
         off.style.scale = 0
     }
 }
+
+// Alterando o conteudo da pagina
+
+function changeContent(event, sectionId) {
+    event.preventDefault()
+    let sections = document.querySelectorAll(".pageContent, .mainContent")
+    sections.forEach(section => {
+        if(section.id === sectionId) {
+            section.classList.remove("changeDisplayOff")
+            section.classList.add("changeDisplayOn")
+            console.log("mudou")
+        } else {
+            section.classList.remove("changeDisplayOn")
+            section.classList.add("changeDisplayOff")
+        }
+    })
+}
+
+function changeProjectContent(event, contentId) {
+    let projetoContents = document.querySelectorAll(".projetosPageContent")
+    projetoContents.forEach(content => {
+        if (content.id === contentId) {
+            content.classList.remove("changeDisplayOff")
+            content.classList.add("changeDisplayOn")
+        } else {
+            content.classList.remove("changeDisplayOn")
+            content.classList.add("changeDisplayOff")
+        }
+    })
+}
