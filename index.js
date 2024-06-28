@@ -28,6 +28,7 @@ function changeVisibility() {
 function changeContent(event, sectionId) {
     event.preventDefault()
     let sections = document.querySelectorAll(".pageContent, .mainContent")
+    console.log(sections.map)
     sections.forEach(section => {
         if(section.id === sectionId) {
             section.classList.remove("changeDisplayOff")
@@ -40,7 +41,10 @@ function changeContent(event, sectionId) {
     })
 }
 
+// Alterando conteudo selecionado na pagina projetos
+
 function changeProjectContent(event, contentId) {
+    event.preventDefault()
     let projetoContents = document.querySelectorAll(".projetosPageContent")
     projetoContents.forEach(content => {
         if (content.id === contentId) {
@@ -52,3 +56,18 @@ function changeProjectContent(event, contentId) {
         }
     })
 }
+
+// Adicionando background ao link nav na aba projetos
+
+function changeBackgroundNavProjetos(id) {
+    let navProjetos = document.querySelectorAll(".navProjeto")
+    navProjetos.forEach(linkNav => {
+        if(linkNav.id === id) {
+            linkNav.classList.add("active")
+        } else {
+            linkNav.classList.remove("active")
+        }
+    })
+}
+
+

@@ -9,6 +9,7 @@ body {
     font-family: "Reddit Mono", monospace; ;
 }
 
+
 .conteiner-list {
     height: 80vh;
     width: 66vw;
@@ -25,9 +26,6 @@ body {
     display: flex;
 }
 
-.red-border {
-    border: 1px solid red;
-}
 .conteiner-adc-tarefa button {
     width: 10%;
     outline: none;
@@ -80,4 +78,14 @@ body {
     text-decoration: line-through;
 }
 
+.conteiner-list a {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+}
 
+.conteiner-list a:hover{
+    background: linear-gradient(to left, rgb(192,192,192),rgb(232,232,232));
+}

@@ -63,24 +63,27 @@
         <section id="projetos" class="pageContent changeDisplayOff">
           <div>
             <ol>
-              <li>
+              <li id="nav_sites" class="navProjeto">
                 <a
                   id="sites"
                   href="#"
-                  onclick="changeProjectContent(event, 'sites')"
+                  onclick="changeProjectContent(event, 'sites');  changeBackgroundNavProjetos('nav_sites')"
                   ><h1>Projetos em sites</h1></a
                 >
               </li>
-              <li>
-                <a id="js" href="#" onclick="changeProjectContent(event, 'js')"
+              <li id="nav_js" class="navProjeto">
+                <a
+                  id="js"
+                  href="#"
+                  onclick="changeProjectContent(event, 'js');  changeBackgroundNavProjetos('nav_js')"
                   ><h1>Projetos em JS</h1></a
                 >
               </li>
-              <li>
+              <li id="nav_css" class="navProjeto">
                 <a
                   id="css"
                   href="#"
-                  onclick="changeProjectContent(event, 'css')"
+                  onclick="changeProjectContent(event, 'css'); changeBackgroundNavProjetos('nav_css')"
                   ><h1>Projetos em CSS</h1></a
                 >
               </li>
@@ -90,12 +93,19 @@
               <img src="" alt="" />
             </div>
             <div id="js" class="projetosPageContent changeDisplayOff">
-              <p>To-do List</p>
-              <a href="pages/todolist.html"><img src="" alt="" /></a>
+              <div>
+                <p>To-do List</p>
+                <a href="pages/todolist.html"><img src="" alt="" /></a>
+              </div>
             </div>
             <div id="css" class="projetosPageContent changeDisplayOff">
               <p>Exemplo 1</p>
             </div>
+          </div>
+        </section>
+        <section id="contato" class="pageContent changeDisplayOff">
+          <div>
+            Teste
           </div>
         </section>
       </main>
