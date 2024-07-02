@@ -11,17 +11,18 @@ function alteraIcon() {
 }
 
 // Fazendo o menu aparecer ao clicar no botao hamburger
+
 function changeVisibility() {
-    let off = document.querySelector(".off")
-    let currentVisibility = window.getComputedStyle(off).visibility
-    if (currentVisibility.includes("hidden")) {
-        off.style.visibility = "visible"
-        off.style.scale = 1
+    let off = document.querySelector(".off");
+    if (off.classList.contains("transformOff")) {
+        off.classList.remove("transformOff");
+        off.classList.add("transformOn");
     } else {
-        off.style.visibility = "hidden"
-        off.style.scale = 0
+        off.classList.remove("transformOn");
+        off.classList.add("transformOff");
     }
 }
+
 
 // Alterando o conteudo da pagina
 
