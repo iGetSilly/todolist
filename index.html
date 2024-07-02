@@ -16,7 +16,7 @@
     <div class="background">
       <header class="conteiner-nav">
         <div>
-          <img src="/img/logo white.svg" alt="Logo do site" />
+          <a class="linkLogo" href=""><img src="/img/logo white.svg" alt="Logo do site" /></a>
           <p>Leonardo Dutra</p>
         </div>
         <button
@@ -56,8 +56,10 @@
             </p>
           </div>
           <div>
-            <a href="" class="fale_comigo">Fale comigo!</a>
-            <a href="" class="projetos">Projetos</a>
+            <a href="" class="fale_comigo" onclick="btnFaleComigo(event)"
+              >Fale comigo!</a
+            >
+            <a href="" class="projetos" onclick="btnProjeto(event)">Projetos</a>
           </div>
         </section>
         <section id="projetos" class="pageContent changeDisplayOff">
@@ -105,7 +107,55 @@
         </section>
         <section id="contato" class="pageContent changeDisplayOff">
           <div>
-            Teste
+            <form
+              action="https://formsubmit.co/iuoyyp@gmail.com"
+              method="POST"
+              class="formContato"
+            >
+              <section>
+                <div>
+                  <label for="text">Nome:</label>
+                  <input type="text" name="text" placeholder="Seu nome" />
+                </div>
+                <div>
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" placeholder="Seu email" />
+                </div>
+                <div>
+                  <label for="textarea">Deixe sua mensagem abaixo:</label>
+                  <textarea
+                    type="textarea"
+                    name="textarea"
+                    placeholder="Digite sua mensagem aqui..."
+                    rows="5"
+                  ></textarea>
+                </div>
+                <input id="formSubmit" type="submit" value="Enviar" />
+              </section>
+              <section class="zap">
+                <p>Ou fale comigo diretamento pelo WhatsApp</p>
+                <a href="https://wa.me/message/Z74OSJH7JMHEK1" target="_blank"
+                  ><img src="img/ph--whatsapp-logo-thin.svg" alt="" />(61)
+                  99307-6220</a
+                >
+              </section>
+            </form>
+          </div>
+        </section>
+        <section id="sobre" class="pageContent changeDisplayOff">
+          <div>
+            <p>
+              Olá! Meu nome é Leonardo Dutra e sou desenvolvedor Front-End.
+              Tenho uma paixão por criar sites intuitivos, bonitos e responsivos
+              para todos os públicos. Atualmente, estou focado em me tornar um
+              especialista em front-end, utilizando tecnologias como HTML, CSS,
+              JavaScript, Tailwind CSS, React, Bootstrap e Next.js. No futuro,
+              pretendo aprofundar meus conhecimentos em UX/UI e eventualmente me
+              tornar um desenvolvedor full-stack. Estou sempre em busca de novos
+              desafios e oportunidades para aprimorar minhas habilidades e
+              oferecer soluções inovadoras.
+            </p>
+            <img src="/img/eu menor.jpg" alt="" />
           </div>
         </section>
       </main>

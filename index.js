@@ -28,12 +28,10 @@ function changeVisibility() {
 function changeContent(event, sectionId) {
     event.preventDefault()
     let sections = document.querySelectorAll(".pageContent, .mainContent")
-    console.log(sections.map)
     sections.forEach(section => {
         if(section.id === sectionId) {
             section.classList.remove("changeDisplayOff")
             section.classList.add("changeDisplayOn")
-            console.log("mudou")
         } else {
             section.classList.remove("changeDisplayOn")
             section.classList.add("changeDisplayOff")
@@ -70,4 +68,21 @@ function changeBackgroundNavProjetos(id) {
     })
 }
 
+// Fazendo o botao projetos e Fale comigo na pagina inicial, trocar a pagina para a area de projetos
+
+function btnProjeto(event) {
+        event.preventDefault()
+        document.querySelector("#home").classList.remove("changeDisplayOn")
+        document.querySelector("#home").classList.add("changeDisplayOff")
+        document.querySelector("#projetos").classList.remove("changeDisplayOff")
+        document.querySelector("#projetos").classList.add("changeDisplayOn")
+}
+
+function btnFaleComigo(event) {
+        event.preventDefault()
+        document.querySelector("#home").classList.remove("changeDisplayOn")
+        document.querySelector("#home").classList.add("changeDisplayOff")
+        document.querySelector("#contato").classList.remove("changeDisplayOff")
+        document.querySelector("#contato").classList.add("changeDisplayOn")
+}
 
