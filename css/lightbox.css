@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #0f0f0f;
+    font-family: "Reddit Mono", monospace;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Setando o tamanho do container */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    width: 90vw;
+    height: 90vh;
+}
+
+/* Setando a imagem */
+
+.img {
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.img:hover {
+    cursor: pointer;
+}
+
+.horizon {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.vertical {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+}
+
+/* Alternando o lightbox */
+
+.lightbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    width: 90vw;
+    height: 90vh;
+}
+
+.displayOn {
+    display: flex;
+}
+
+.displayOff {
+    display: none;
+}
+
+.mainImg {
+    width: auto;
+    height: 70%;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    object-fit: cover;
+}
+
+.lightbox_images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    width: 90%;
+    height: 25%;
+}
+

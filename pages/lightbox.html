@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/lightbox.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Light-Box</title>
+  </head>
+  <body>
+    <main class="container displayOn">
+        <img onclick="getSrc()" class="horizon img" src="../img/lightbox/img1.jpg" alt="">
+        <img onclick="getSrc()" class="vertical img" src="../img/lightbox/img2.jpg" alt="">
+        <img onclick="getSrc()" class="vertical img" src="../img/lightbox/img3.jpg" alt="">
+        <img onclick="getSrc()" class="horizon img" src="../img/lightbox/img4.jpg" alt="">
+    </main>
+    <section class="lightbox displayOff">
+        <img onclick="teste()" class="mainImg" src="../img/lightbox/img1.jpg" alt="">
+        <div class="lightbox_images">
+            <img onclick="teste()" class="horizon img" src="../img/lightbox/img1.jpg" alt="">
+            <img class="vertical img" src="../img/lightbox/img2.jpg" alt="">
+            <img class="vertical img" src="../img/lightbox/img3.jpg" alt="">
+            <img class="horizon img" src="../img/lightbox/img4.jpg" alt="">
+        </div>
+    </section>
+  </body>
+  <script src="../js/lightbox.js"></script>
+</html>
