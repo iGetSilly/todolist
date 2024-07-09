@@ -21,8 +21,8 @@ body {
     justify-content: center;
     margin: 0 auto;
     
-    width: 90vw;
-    height: 90vh;
+    width: 96vw;
+    height: 96vh;
 }
 
 /* Setando a imagem */
@@ -39,12 +39,13 @@ body {
 
 .horizon {
     width: 90%;
-    height: 90%;
+    height: 50%;
+    overflow-y: auto;
     object-fit: cover;
 }
 
 .vertical {
-    height: 90%;
+    height: 50%;
     width: 90%;
     object-fit: cover;
 }
@@ -87,5 +88,24 @@ body {
     
     width: 90%;
     height: 25%;
+}
+
+/* Expandindo a imagem principal ao clicar nela */
+
+.expandMainImg {
+    position: absolute;
+    height: 90vh;
+    width: auto;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    object-fit: fill;
+}
+
+/* Icone para trocar a imagem expandida */
+
+.icon {
+    
 }
 
