@@ -1,111 +1,141 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background: #0f0f0f;
-    font-family: "Reddit Mono", monospace;
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+  background: #0f0f0f;
+  font-family: "Reddit Mono", monospace;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* Setando o tamanho do container */
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    
-    width: 96vw;
-    height: 96vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  width: 96vw;
+  height: 96vh;
 }
 
 /* Setando a imagem */
 
 .img {
-    border-radius: 8px;
-    margin: 20px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .img:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .horizon {
-    width: 90%;
-    height: 50%;
-    overflow-y: auto;
-    object-fit: cover;
+  width: 90%;
+  height: 50%;
+  overflow-y: auto;
+  object-fit: cover;
 }
 
 .vertical {
-    height: 50%;
-    width: 90%;
-    object-fit: cover;
+  height: 50%;
+  width: 90%;
+  object-fit: cover;
 }
 
 /* Alternando o lightbox */
 
 .lightbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    
-    width: 90vw;
-    height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  width: 90vw;
+  height: 90vh;
 }
 
 .displayOn {
-    display: flex;
+  display: flex;
 }
 
 .displayOff {
-    display: none;
+  display: none;
+}
+
+.mainImg_container {
+  position: relative;
+  width: auto;
+  height: 70%;
+  border-radius: 8px;
 }
 
 .mainImg {
-    width: auto;
-    height: 70%;
-    border-radius: 8px;
-    margin: 20px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    object-fit: cover;
+  width: auto;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  object-fit: cover;
 }
 
 .lightbox_images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    
-    width: 90%;
-    height: 25%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  width: 90%;
+  height: 25%;
 }
 
 /* Expandindo a imagem principal ao clicar nela */
 
 .expandMainImg {
-    position: absolute;
-    height: 90vh;
-    width: auto;
-    border-radius: 8px;
-    overflow-x: auto;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    object-fit: fill;
+  height: 90vh;
+  width: auto;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  object-fit: fill;
 }
 
 /* Icone para trocar a imagem expandida */
 
-.icon {
-    
+.icon_left,
+.icon_right {
+  position: absolute; /* Modificado */
+  top: 50%;
+  transform: translateY(175%);
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
+.icon_left:hover, .icon_right:hover {
+    background: rgba(31, 31, 31, 0.5);
+    transition: 0.6s ease;
+}
+
+.icon_left {
+  left: 0px; /* Modificado */
+  border-radius: 0 3px 3px 0;
+}
+
+.icon_right {
+  right: 0; /* Modificado */
+  border-radius: 3px 0px 0px 3px;
+}

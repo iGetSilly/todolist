@@ -20,10 +20,10 @@
         <img onclick="getSrc()" class="horizon img" src="../img/lightbox/img4.jpg" alt="">
     </main>
     <section class="lightbox displayOff">
-      <div class="mainImg">
+      <div class="mainImg_container">
+        <a href="" onclick="changeImg()" class="icon_left displayOff">&#10094;</a>
         <img onclick="expandMainImg()" class="mainImg" src="../img/lightbox/img1.jpg" alt="">
-        <a href="">&#10094;</a>
-        <a href="">&#10095;</a>
+        <a href="" onclick="changeImg()" class="icon_right displayOff">&#10095;</a>
       </div>
         <div class="lightbox_images">
             <img onclick="getSrcLightbox()" class="horizon img" src="../img/lightbox/img1.jpg" alt="">
@@ -32,6 +32,6 @@
             <img onclick="getSrcLightbox()" class="horizon img" src="../img/lightbox/img4.jpg" alt="">
         </div>
     </section>
+    <script src="../js/lightbox.js"></script>
   </body>
-  <script src="../js/lightbox.js"></script>
 </html>
