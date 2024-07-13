@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background: #0f0f0f;
+    font-family: "Reddit Mono", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    color: azure;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 8vh 8vh 8vh 8vh 8vh 8vh 8vh;
+    grid-template-columns: 8vw 8vw 8vw 8vw;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "resultado resultado resultado resultado"
+    "Porcentagem reset_teclado reset_calc backspace"
+    "um_dividido quadrado raiz divisao"
+    "sete oito nove multiplicacao"
+    "quatro cinco seis menos"
+    "um dois tres mais"
+    "negativo_positivo zero virgula igual";
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+  }
+
+  .container a:hover {
+    background-color: rgb(75, 75, 75);
+  }
+
+  .container .resultado {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    text-decoration: none;
+    color: azure;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    border:rgb(75, 75, 75) solid 1px;
+  }
+
+  .container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 29, 29);
+    text-decoration: none;
+    color: azure;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    border:rgb(75, 75, 75) solid 1px;
+    
+  }
+
+  /* Setando os grids */
+
+  /* Resultado */
+
+  .resultado {
+    grid-area: resultado;
+  }
+
+  /* Linha 1 */
+
+  .porcentagem {
+    grid-area: Porcentagem;
+  }
+
+  .reset_teclado {
+    grid-area: reset_teclado;
+  }
+
+  .reset_calc {
+    grid-area: reset_calc;
+  }
+
+  .backspace {
+    grid-area: backspace;
+  }
+
+  /* Linha 2 */
+
+  .um_dividido {
+    grid-area: um_dividido;
+  }
+
+  .quadrado {
+    grid-area: quadrado;
+  }
+
+  .raiz {
+    grid-area: raiz;
+  }
+
+  .divisao {
+    grid-area: divisao;
+  }
+
+  /* Linha 3 */
+
+  .sete {
+    grid-area: sete;
+  }
+  .oito {
+    grid-area: oito;
+  }
+  .nove {
+    grid-area: nove;
+  }
+  .multiplicacao {
+    grid-area: multiplicacao;
+  }
+
+  /* Linha 4 */
+
+  .quatro {
+    grid-area: quatro;
+  }
+  .cinco {
+    grid-area: cinco;
+  }
+  .seis {
+    grid-area: seis;
+  }
+  .menos {
+    grid-area: menos;
+  }
+
+  /* Linha 5 */
+  
+  .um {
+    grid-area: um;
+  }
+  .dois {
+    grid-area: dois;
+  }
+  .tres {
+    grid-area: tres;
+  }
+  .mais {
+    grid-area: mais;
+  }
+  
+  /* Linha 6 */
+
+  .negativo_positivo {
+    grid-area: negativo_positivo;
+  }
+  .zero {
+    grid-area: zero;
+  }
+  .virgula {
+    grid-area: virgula;
+  }
+  .igual {
+    grid-area: igual;
+  }
