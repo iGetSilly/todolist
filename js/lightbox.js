@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     getSrc();
     getSrcLightbox()
-    changeImg()
+    changeImg(event)
 });
 
 function getSrc() {
@@ -57,6 +57,33 @@ function expandMainImg() {
 
 }
 
-function changeImg() {
-    
+
+
+function changeImg(event) {
+    let mainImg = document.querySelector(".mainImg")
+    let images = Array.from(document.querySelectorAll(".lightbox_images .img"))
+    let icon_left = document.querySelector(".icon_left")
+    let icon_right = document.querySelector(".icon_right")
+    event.preventDefault()
+
+    function updateMainImg(newIndex) {
+        if (newIndex >= 0 && newIndex < images.length) {
+            mainImg.src = images[newIndex].src
+        }
+    }
+
+    icon_left.addEventListener('click',  () => {
+        let currentIndex = images.findIndex(img => img.src === mainImg.src)
+        let previousIndex = (currentIndex - 1 + images.length) % images.length
+        updateMainImg(previousIndex)
+        console.log("test-left")
+        // mainImg.src = images[previousIndex].src
+    }, {once : true})
+    icon_right.addEventListener('click', () => {
+        let currentIndex = images.findIndex(img => img.src === mainImg.src)
+        let nextIndex = (currentIndex + 1) % images.length
+        updateMainImg(nextIndex)
+        console.log("test-right")
+        // mainImg.src = images[nextIndex].src
+    }, {once : true})
 }

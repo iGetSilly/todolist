@@ -1,106 +1,146 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    inputs(event);
+    inputs();
+    // reset()
+    // backspace()
+    // negativo_positivo()
+    // soma()
 })
 
-function inputs(event) {
-    event.preventDefault()
+const RESULTADO = document.querySelector(".resultado_calc")
+const RESULTADO_ANTERIOR = document.querySelector(".resultado_anterior")
+let aux = ""
+let currentInput = ""
+let prevInput = ""
+let numbers = []
 
+// Making the keys work
 
-    // Fazendo as teclas funcionarem
-
-    let resultado = document.querySelector(".resultado_calc")
-    let resultado_anterior = document.querySelector(".resultado_anterior")
-    let aux = 0
-    let currentInput = ""
-    let prevInput = ""
+function inputs() {
     document.querySelectorAll(".input").forEach(input => {
         window.addEventListener("keypress", tecla => {
             if (tecla.key === input.innerHTML) {
-                currentInput = resultado.textContent += `${tecla.key}`
-                resultado.textContent = currentInput
+                currentInput = RESULTADO.textContent += `${tecla.key}`
+                RESULTADO.textContent = currentInput
+
             }
         })
     })
-
     document.querySelectorAll(".input").forEach(input => {
         input.addEventListener("click", event => {
             event.preventDefault()
             currentInput += `${input.textContent}`
-            resultado.textContent = currentInput
-
+            RESULTADO.textContent = currentInput
+            event.target.blur()
         })
     })
 
-    // Fazendo o backspace funcionar
+
+// making the backspace work
 
     document.querySelector(".backspace").addEventListener("click", event => {
         event.preventDefault()
-        currentInput = resultado.textContent.slice(0, -1)
-        resultado.textContent = currentInput
+        currentInput = RESULTADO.textContent.slice(0, -1)
+        RESULTADO.textContent = currentInput
+        event.target.blur()
     })
 
     window.addEventListener("keydown", event => {
         if (event.key === "Backspace") {
-            event.preventDefault();
-            currentInput = resultado.textContent.slice(0, -1)
-            resultado.textContent = currentInput
+            currentInput = RESULTADO.textContent.slice(0, -1)
+            RESULTADO.textContent = currentInput
             console.log(currentInput)
         }
     });
 
-    // Fazendo o botao de reset funcionar
-
-    document.querySelector(".reset_calc").addEventListener("click", event => {
-        event.preventDefault()
-        currentInput = ""
-        prevInput = ""
-        resultado.textContent = currentInput
-        resultado_anterior.textContent = prevInput
-    })
-
-    // Deixando os numeros negativos ou positivos
+// Turn numbers into positives or negatives
 
     document.querySelector(".negativo_positivo").addEventListener("click", event => {
         event.preventDefault()
-        if (Math.sign(resultado.textContent) === 1) {
-            resultado.textContent = -(currentInput)
-        } else {
-            resultado.textContent = currentInput
-        }
+        event.target.blur()
+        if (RESULTADO.textContent >= 0) {
+            currentInput = -(currentInput)
+            console.log(currentInput)
+            return (RESULTADO.textContent = currentInput)
 
+        } else {
+            currentInput = -(currentInput)
+            console.log(currentInput)
+            return (RESULTADO.textContent = currentInput)
+        }
     })
 
-    // Soma
+// addition
 
     window.addEventListener("keydown", event => {
-        document.querySelectorAll(".input_logico").forEach(input_logico => {
-            if (input_logico.innerHTML === event.key) {
-                event.preventDefault()
-                aux = currentInput
-                prevInput = resultado_anterior.textContent = aux + input_logico.innerHTML
-                resultado_anterior.textContent = prevInput
+        let soma = document.querySelector(".mais")
+
+        // if (!isNaN(event.key) || event.key === ".") {
+        // // if (soma.innerHTML === event.key) {
+        // //    currentInput = RESULTADO.textContent += soma.innerHTML
+        // //    RESULTADO.textContent = currentInput
+        // //    prevInput = RESULTADO.textContent
+        // //    currentInput += soma.innerHTML
+        //    currentInput += event.key
+        //    RESULTADO.textContent = currentInput
+        // //    prevInput = RESULTADO.textContent
+        // }
+        if (soma.innerHTML === event.key) {
+            if (currentInput !== "") {
+                numbers.push(parseFloat(currentInput))
+                currentInput += event.key
+                RESULTADO.textContent = currentInput
+                aux = RESULTADO_ANTERIOR.textContent = currentInput
                 currentInput = ""
-                resultado.textContent = currentInput
-
-                window.addEventListener("keypress", event => {
-                    if (event.key === "Enter" && resultado.textContent === "") {
-                        event.preventDefault()
-                        resultado.textContent = currentInput
-                    } else {
-                        if (event.key === "Enter") {
-                            event.preventDefault()
-            
-                            prevInput = resultado_anterior.textContent = aux + input_logico.innerHTML + currentInput
-                            console.log(prevInput)
-                            resultado_anterior.textContent = prevInput
-                            currentInput = resultado.textContent = parseFloat(aux) + parseFloat(currentInput)
-                            resultado.textContent = currentInput
-                        }
-
-                    }
-
-                })
             }
-        })
+            RESULTADO.textContent = ""
+        }
+
+        if (event.key === "Enter") {
+            if (currentInput !== "") {
+                numbers.push(parseFloat(currentInput))
+                RESULTADO_ANTERIOR.textContent = aux += currentInput
+                currentInput = ""
+            }
+            let total = numbers.reduce((acc, num) => acc + num, 0)
+            RESULTADO.textContent = total
+            console.log("numeros: ", numbers)
+            console.log("total: ", total)
+            numbers = []
+
+            // prevInput = RESULTADO.textContent
+            // RESULTADO_ANTERIOR.textContent = prevInput
+            // console.log(prevInput)
+            // console.log(currentInput)
+            // RESULTADO.textContent = parseFloat(prevInput) + parseFloat(currentInput)
+
+            // const prevValue = parseFloat(prevInput)
+            // const currentValue = parseFloat(currentInput)
+
+            // if (!isNaN(prevValue) && !isNaN(currentValue)) {
+            //     RESULTADO.textContent = prevValue + currentValue
+            // } else {
+            //     console.error("Erro na conversao para numeros")
+            // }
+
+            
+
+       }
+    })
+
+
+// making the reset button works
+
+    document.querySelector(".reset_calc").addEventListener("click", event => {
+        event.preventDefault()
+        event.target.blur()
+        RESULTADO.textContent = ""
+        RESULTADO_ANTERIOR.textContent = ""
+        aux = ""
+        currentInput = ""
+        prevInput = ""
+        console.log("PrevInput: " + prevInput)
+        console.log("Resultado Anterior: " + RESULTADO_ANTERIOR.textContent)
+        console.log("Resultado: " + RESULTADO.textContent)
+        console.log("Aux: " + aux)
     })
 }
