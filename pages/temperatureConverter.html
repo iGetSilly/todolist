@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/temperatureConverter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Exercício de escopo de variáveis</title>
+</head>
+<body>
+    <section class="container">
+        <p>Digite uma temperatura abaixo:</p>
+        <input type="number" name="number" id="number">
+        <div>
+            <label for="celciusToFahrenheit">Celcius to fahrenheit</label>
+            <input type="checkbox" name="celciusToFahrenheit" id="celciusToFahrenheit" onclick="cToF()">
+        </div>
+        <div>
+            <label for="celciusToKelvin">Celcius to kelvin</label>
+            <input type="checkbox" name="celciusToKelvin" id="celciusToKelvin" onclick="cToK()">
+        </div>
+        <div>
+            <label for="fahrenheitToCelcius">Farhrenheit to celcius</label>
+            <input type="checkbox" name="fahrenheitToCelcius" id="fahrenheitToCelcius" onclick="fToC()">
+        </div>
+        <div>
+            <label for="fahrenheitToKelvin">Fahrenheit to kelvin</label>
+            <input type="checkbox" name="fahrenheitToKelvin" id="fahrenheitToKelvin" onclick="fToK()">
+        </div>
+        <div>
+            <label for="kelvinToCelcius">Kelvin to celcius</label>
+            <input type="checkbox" name="kelvinToCelcius" id="kelvinToCelcius" onclick="kToC()">
+        </div>
+        <div>
+            <label for="kelvinToFahrenheit">Kelvin to fahrenheit</label>
+            <input type="checkbox" name="kelvinToFahrenheit" id="kelvinToFahrenheit" onclick="kToF()">
+        </div>
+        <div id="result">
+            <p class="result">0</p>
+        </div>
+    </section>
+    <script src="../js/temperatureConverter.js"></script>
+</body>
+</html>
