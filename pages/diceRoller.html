@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller Program</title>
+    <link rel="stylesheet" href="/css/diceRoller.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body> 
+    <main>
+        <h1>Role o dado:</h1>
+        <div>
+            <label for="dado">Quantidade de dados:</label>
+            <input id="diceNumber" type="number" value="1" min="1">
+            <button id="btnDado" onclick="jogarDado()">Jogar dado</button>
+        </div>
+        <div id="diceResult"></div>
+        <div id="diceImage"></div>
+    </main>
+    <script src="/js/diceRoller.js"></script>
+</body>
+</html>

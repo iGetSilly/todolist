@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Reddit Mono", monospace;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(8, 8, 8), rgb(16, 16, 16));
+    color: azure;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+main > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 8px;
+}
+
+#diceNumber {
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+}
+
+#btnDado {
+    padding: 8px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(45deg, rgb(32, 32, 32), rgb(48, 48, 48));
+    color: azure;
+    font-size: 1.5rem;
+}
+
+#btnDado:hover {
+    background: linear-gradient(45deg, rgb(48, 48, 48), rgb(64, 64, 64))
+}
+
+#btnDado:active {
+    background: linear-gradient(45deg, rgb(64, 64, 64), rgb(80, 80, 80))
+}
+
+#diceImage {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+#diceImage img {
+    border: 1px solid red;
+    width: 5%;
+    height: 5%;
+    margin: 5px;
+    border-radius: 20px;
+    height: 100px;
+
+}
+
